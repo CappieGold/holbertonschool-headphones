@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    background-image: url('images/headphones_hero_1.jpg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* header                                                                                     */
+/* ------------------------------------------------------------------------------------------ */
+.header {
+    display: flex;/* active flexbox */
+    justify-content: space-between;/* espace entre logo et navigation */
+    align-items: center;/* alignement vertical centré */
+    padding: 20px;/* espace intérieur */
+}
+
+/* Ajustement du logo */
+.header img {
+    width: 200px; /* ajuste cette valeur selon la taille désirée */
+    height: auto; /* conserve les proportions de l'image */
+    margin-left: 200px; /* marge à gauche du logo */
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* nav                                                                                        */
+/* ------------------------------------------------------------------------------------------ */
+/* Pour que la navigation s'aligne horizontalement aussi : */
+.nav {
+    display: flex;/* aligne horizontalement les liens */
+    gap: 50px;/* espace entre les liens */
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Supprime la marge par défaut sur les paragraphes si nécessaire */
+.nav p {
+    margin: 0;
+}
+
+/* Ajout d'une marge à droite au dernier lien */
+.nav p:last-child {
+    margin-right: 200px; /* marge à droite du dernier lien */
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* hero-section                                                                               */
+/* ------------------------------------------------------------------------------------------ */
+.hero-section {
+    text-align: center;/* Centre horizontalement tous les textes et boutons */
+    padding: 100px 20px;/* Espacement intérieur généreux pour plus de lisibilité */
+    margin-top: 220px;/* Ajoute un espace entre header et hero-section */
+}
+
+/* Pour bien présenter ton bouton également */
+.hero-section .btn {
+    margin: 50px auto 80px auto;/* Centrage horizontal du bouton avec marge */
+    padding: 15px 30px;/* Espacement intérieur du bouton (optionnel mais recommandé) */
+    font-size: 12px;/* Taille texte du bouton (ajuste selon préférence) */
+    font-weight: bold;
+    cursor: pointer;/* Indique visuellement que le bouton est cliquable */
+    background-color: #FF6565;
+    color: white;
+    border-radius: 20px;
+    border: none;
+}
+
+.hero-text {
+    max-width: 700px;/* Ajuste cette largeur selon ta préférence */
+    margin: 0 auto;/* Centre horizontalement le texte */
+    text-align: center;/* Centre le texte lui-même */
+    line-height: 1.6;/* Espacement des lignes agréable (optionnel) */
+}
