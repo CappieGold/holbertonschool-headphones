@@ -20,6 +20,7 @@
     justify-content: space-between;/* espace entre logo et navigation */
     align-items: center;/* alignement vertical centré */
     padding: 20px;/* espace intérieur */
+    position: relative;
 }
 
 /* Ajustement du logo */
@@ -80,5 +81,78 @@
     max-width: 700px;/* Ajuste cette largeur selon ta préférence */
     margin: 0 auto;/* Centre horizontalement le texte */
     text-align: center;/* Centre le texte lui-même */
-    line-height: 1.6;/* Espacement des lignes agréable (optionnel) */
+    line-height: 1.6;/* Espacement des lignes agréable */
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* header for mobile                                                                          */
+/* ------------------------------------------------------------------------------------------ */
+/* Cache la checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Style de l'icône hamburger */
+.menu-toggle {
+    font-size: 28px;
+    cursor: pointer;
+    display: none; /* Caché par défaut sur desktop */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    color: white;
+}
+
+/* Responsive mobile (moins de 768px) */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 65px;
+        left: 20px;
+        font-size: 28px;
+        cursor: pointer;
+        z-index: 10;
+        color: white;
+    }
+
+    .header {
+        position: relative;
+        flex-direction: column;
+        padding: 60px 20px 20px 20px;
+    }
+
+    .header img {
+        margin-left: 0; /* Très important pour éviter de repousser l'icône */
+    }
+
+    .logo {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .nav {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        text-align: center;
+        padding: 10px 0;
+        display: none;
+        background-color: rgba(0,0,0,0.7);
+        margin-top: 10px;
+    }
+
+    #menu-toggle:checked ~ .nav {
+        display: flex;
+    }
+
+    .nav p:last-child {
+        margin-right: 0;
+    }
+
+    .nav p {
+        padding: 10px;
+    }
 }
